@@ -1,0 +1,32 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: never
+
+  port: 8080
+  servlet:
+    context-path: /healtcare-service/api
+
+spring:
+  datasource:
+    password: 1869
+    url: jdbc:mysql://localhost:3306/healthcareservices
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    show-sql: true
+
+  servlet:
+    multipart:
+      max-request-size: 15MB
+      max-file-size: 15MB
+
