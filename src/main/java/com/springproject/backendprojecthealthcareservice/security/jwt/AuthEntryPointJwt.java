@@ -1,5 +1,6 @@
 package com.springproject.backendprojecthealthcareservice.security.jwt;
 
+<<<<<<< HEAD
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.AuthenticationException;
@@ -21,4 +22,7 @@ public class AuthEntryPointJwt implements AuthenticationEntryPoint {
         logger.error("Unauthorized error: {}", authException.getMessage());
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Error: Unauthorized");
     }
+=======
+public class AuthEntryPointJwt {
+>>>>>>> origin/master
 }
