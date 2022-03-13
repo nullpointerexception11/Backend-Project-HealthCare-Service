@@ -114,7 +114,7 @@ public class UserController {
         userService.updatePassword(id, newPassword, oldPassword);
         Map<String, Boolean> map = new HashMap<>();
         map.put("success", true);
-        return new ResponseEntity<>(map, HttpStatus.OK)
+        return new ResponseEntity<>(map, HttpStatus.OK);
     }
 
     @DeleteMapping("/user/{id}/auth")
