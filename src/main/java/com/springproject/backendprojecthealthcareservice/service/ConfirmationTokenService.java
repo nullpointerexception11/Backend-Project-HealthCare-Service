@@ -1,5 +1,6 @@
 package com.springproject.backendprojecthealthcareservice.service;
 
+import com.springproject.backendprojecthealthcareservice.exception.ResourceNotFoundException;
 import com.springproject.backendprojecthealthcareservice.model.ConfirmationToken;
 import com.springproject.backendprojecthealthcareservice.repository.ConfirmationTokenRepository;
 import lombok.AllArgsConstructor;
@@ -14,8 +15,9 @@ public class ConfirmationTokenService {
 
     private final ConfirmationTokenRepository confirmationTokenRepository;
 
-    public void saveConfirmationToken(ConfirmationToken token){
-        confirmationTokenRepository.save(token);
+    public void saveConfirmationToken(ConfirmationToken confirmationToken){
+
+        confirmationTokenRepository.save(confirmationToken);
     }
     public Optional<ConfirmationToken> getToken(String token){
         return confirmationTokenRepository.findByToken(token);
