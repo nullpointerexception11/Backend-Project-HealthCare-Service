@@ -18,8 +18,12 @@ import java.util.Optional;
 public interface SecretaryRepository extends JpaRepository<Secretary, Long> {
 
     Optional<SecretaryDTO> findByUserIdOrderByUserId(User userId) throws ResourceNotFoundException;
+
     Optional<Secretary> findByUserId(User userId) throws ResourceNotFoundException;
+
     Optional<SecretaryDTO> findByIdOrderById(Long id) throws ResourceNotFoundException;
+
     List<SecretaryDTO> findByDepartment(Department department);
+
     List<SecretaryDTO> findAllBy();
 }

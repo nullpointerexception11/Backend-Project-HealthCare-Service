@@ -18,8 +18,12 @@ import java.util.Optional;
 public interface NurseRepository extends JpaRepository<Nurse, Long> {
 
     Optional<NurseDTO> findByUserIdOrderByUserId(User userId) throws ResourceNotFoundException;
+
     Optional<Nurse> findByUserId(User userId) throws ResourceNotFoundException;
+
     Optional<NurseDTO> findByIdOrderById(Long id) throws ResourceNotFoundException;
+
     List<NurseDTO> findByDepartment(Department department);
+
     List<NurseDTO> findAllBy();
 }
