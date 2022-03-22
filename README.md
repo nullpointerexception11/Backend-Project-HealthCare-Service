@@ -4,7 +4,7 @@ The Healthcare Services API implements a complex domain model flow to an appoint
 
 - Spring Boot (JPA, Web, Devtools, Validation, Security)
 - Spring Framework
-- PostgreSQL
+- MySQL
 - Maven
 - Javax
 - Jsonwebtoken
